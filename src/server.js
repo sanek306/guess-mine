@@ -17,5 +17,4 @@ const server = app.listen(PORT, handleListening);
 
 const io = socketIO.listen(server);
 
-let sockets = [];
-io.on('connection', (socket) => sockets.push(socket.id));
+io.on('connection', (socket) => socket.emit('hello'));
